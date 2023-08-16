@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  experimental: {
+    swcPlugins: [
+      [
+        "use-client",
+        {
+          include: ["antd/"],
+        },
+      ],
+    ],
+  },
+}
 
 module.exports = nextConfig
